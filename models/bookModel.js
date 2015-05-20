@@ -1,5 +1,5 @@
 var mongoose = require('mongoose'),
-    schema = mongoose.schema();
+    Schema = mongoose.Schema;
 
 var bookModel = new Schema({
     title: {
