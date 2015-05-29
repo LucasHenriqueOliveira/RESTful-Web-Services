@@ -25,5 +25,9 @@
     "mongoose": "^4.0.3",
     "should": "^6.0.3",
     "sinon": "^1.14.1"
+  },
+  "devDependencies": {
+    "gulp-env": "^0.2.0",
+    "supertest": "^1.0.1"
   }
 }

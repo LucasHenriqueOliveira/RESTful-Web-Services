@@ -9,7 +9,12 @@ db.once('open', function() {
     console.log('Conectado ao MongoDB.')
 });
 
-db = mongoose.connect('mongodb://localhost/BookAPI');
+if(process.env.ENV == 'Test')
+    db = mongoose.connect('mongodb://localhost/BookAPI-Tests');
+else{
+    db = mongoose.connect('mongodb://localhost/BookAPI');
+}
+
 
 var Book = require('./models/bookModel');
 
@@ -33,3 +38,5 @@ app.get('/', function(req, res){
 app.listen(port, function(){
     console.log('Gulp is running my app on PORT: ' + port);
 });
+
+module.exports = app;
